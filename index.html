@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Bright Home Cleaning Services</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+   })();
+</script>
+</head>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+<body>
+    <header>
+        <h1>Your Bright Home Cleaning Services</h1>
+        <p>Professional and reliable cleaning for homes & offices</p>
+    </header>
+   <section class="hero">
+    <div class="hero-text">
+        <h2>Brighten Your Space</h2>
+        <p>Professional cleaning for homes & offices</p>
+       <div class="book-now">
+    <a href="https://wa.me/233546157619?text=Hello!%20I%20would%20like%20to%20book%20a%20cleaning%20service." target="_blank">
+        Book Now
+    </a>
+</div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+        <div class="service-card">
+            <img src="images/house-cleaning.jpg.jpg" alt="House Cleaning">
+            <h3>House Cleaning</h3>
+            <p>Professional floor cleaning to keep your home or office spotless.</p>
+        </div>
+        <div class="service-card">
+            <img src="images/office-cleaning.jpg.jpg" alt="office Cleaning">
+            <h3>office Cleaning</h3>
+            <p>Streak-free window cleaning for crystal-clear views.</p>
+        </div>
+        <div class="service-card">
+            <img src="images/sofa-cleaing.jpg.jpg" alt="Sofa Cleaning">
+            <h3>Sofa Cleaning</h3>
+            <p>Deep sofa cleaning to remove dust, stains, and allergens.</p>
+        </div>
+        <div class="service-card">
+            <img src="images/window-cleaning.jpg.jpg" alt="Window Cleaning">
+            <h3>Window Cleaning</h3>
+            <p>Crystal clear windows for a brighter view, streak free guarantee!</p>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="gallery">
+  <h2>Our Work</h2>
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="images/gallery1.jpg" data-full="images/gallery1.jpg" alt="House Cleaning">
+    </div>
+    <div class="gallery-item">
+      <img src="images/gallery2.jpg" data-full="images/gallery2.jpg" alt="Office Cleaning">
+    </div>
+    <div class="gallery-item">
+      <img src="images/gallery3.jpg" data-full="images/gallery3.jpg" alt="Sofa Cleaning">
+    </div>
+    <div class="gallery-item">
+      <img src="images/gallery4.jpg" data-full="images/gallery4.jpg" alt="Before and After">
+    </div>
+    <div class="gallery-item">
+      <img src="images/gallery5.jpg" data-full="images/gallery5.jpg" alt="window cleaning">
+     </div>
+    <div class="gallery-item">
+      <img src="images/gallery6.jpg" data-full="images/gallery6.jpg" alt="Before and After">
+      </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-image" id="lightboxImage">
+  
+  <!-- Navigation Arrows -->
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+</div>
+
+
+  <!-- Contact Section -->
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:yourbrighthomecleaningservice@gmail.com">yourbrighthomecleaningservice@gmail.com</a></p>
+    <p>Phone: <a href="tel:+233546157619">+233 546 157 619</a></p>
+</section>
+<div class="book-now">
+    <a href="https://wa.me/233546157619?text=Hello!%20I%20would%20like%20to%20book%20a%20cleaning%20service." target="_blank">
+        Book Now
+    </a>
+</div>
+<section id="contact" class="contact">
+  <h2>Email Us</h2>
+  <form id="contact-form">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="user_name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="user_email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <p>&copy; 2025 Your Bright Home Cleaning Services. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
+</footer>
+<a href="https://wa.me/233546157619?text=Hello%20Your%20Bright%20Cleaning%20Services,%20I%20would%20like%20to%20book%20a%20cleaning%20service." 
+   class="whatsapp-float" 
+   target="_blank">
+   <img src="images/whatsapp-icon.png" alt="WhatsApp"
+        class="whatsapp-icon">
+</a>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+      .then(function() {
+        alert('Message sent successfully!');
+      }, function(error) {
+        alert('Failed to send message. Error: ' + JSON.stringify(error));
+      });
+  });
+
+  // Lightbox functionality with navigation
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const closeBtn = document.querySelector(".lightbox .close");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+const galleryItems = document.querySelectorAll(".gallery-item img");
+
+let currentIndex = 0;
+
+// Open lightbox
+galleryItems.forEach((img, index) => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImage.src = img.dataset.full;
+    currentIndex = index;
+  });
+});
+
+// Close lightbox
+closeBtn.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+
+// Prev navigation
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+  lightboxImage.src = galleryItems[currentIndex].dataset.full;
+});
+
+// Next navigation
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % galleryItems.length;
+  lightboxImage.src = galleryItems[currentIndex].dataset.full;
+});
+
+</script>
+</body>
+</html>
